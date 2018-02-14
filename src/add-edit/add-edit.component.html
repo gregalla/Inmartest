@@ -1,0 +1,24 @@
+
+<div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Country</th>
+        <th>Population</th>
+        <th>Male</th>
+        <th>Female</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of _insuranceData">
+        <td>{{item.County}}</td>
+        <td>{{item.Population}}</td>
+        <td>{{item.Male}}</td>
+        <td>{{item.Female}}</td>
+        <td><button type="button" (click)="editContent(item)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" (click)="editContent('new')">Add New County</button>
+  </div>
